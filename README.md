@@ -1,38 +1,11 @@
-# sv
+<img width="327" height="361" alt="image" src="https://github.com/user-attachments/assets/f9dce361-95da-4fe2-8fd5-a7dae8255fdc" />
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+# SvelteKit Example App
 
-## Creating a project
+#1 `npm install @auth/sveltekit`
+ 
+#2 `npx auth secret`
+  This will add it to your .env file, respecting the framework conventions 
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```sh
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+#3 Auth.js comes with over 80 providers preconfigured. We constantly test ~20 of the most popular ones, by having them enabled and actively used in our example application. You can choose a provider below to get a walk-through, or find your provider of choice in the sidebar for further details.
+https://authjs.dev/getting-started/authentication/oauth
