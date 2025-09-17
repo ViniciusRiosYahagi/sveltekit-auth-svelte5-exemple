@@ -1,20 +1,23 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { signIn, signOut } from '@auth/sveltekit/client';
+
+  let user = $derived(page.data.session?.user)
+  let session = $derived(page.data.session)
 </script>
 
 <header class="p-10">
 	<div class="flex items-center justify-between bg-amber-100 p-5">
 		<img
 			alt="User avatar"
-			src={page.data?.session?.user?.image ??
+			src={user?.image ??
 				`https://api.dicebear.com/9.x/thumbs/svg?seed=${Math.floor(Math.random() * 100000) + 1}&randomizeIds=true`}
 			class="size-15 rounded-full"
 		/>
 		<div>
-			{#if page.data.session}
+			{#if session}
 				<span class="signedInText pr-3">
-					{page.data.session.user?.email ?? page.data.session.user?.name}
+					{user?.email ?? user?.name}
 				</span>
 				<button class="bg-blue-400 p-3" onclick={() => signOut()}>Sign in</button>
 			{:else}
